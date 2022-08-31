@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import "./mixin";
+
+* , *::before, *::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container-bg{
+  max-width: 1390px;
+  margin: 0 auto;
+  padding: 0 5px;
+}

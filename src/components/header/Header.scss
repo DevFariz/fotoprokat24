@@ -1,0 +1,58 @@
+@import "../../style/mixin";
+
+.header{
+  border-bottom: 1px solid #EFEFEF;
+  &-container{
+    @include flex-space-between;
+    padding-left: 10%;
+  }
+  &-btn{
+    padding: 27px;
+    border: none;
+    border-left: 1px solid #EFEFEF;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+      background: linear-gradient(180deg, #96f704 0%, #6ce236 100%);
+    }
+  }
+}
+
+.menu{
+  display: flex;
+  &__item{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 11px;
+    a{
+      text-decoration: none;
+      color: #000;
+      transition: 0.25s;
+      &:hover{
+        color: green;
+      }
+    }
+  }
+}
+
+.logo{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 26px;
+  span{
+    background: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.user{
+
+  &-interaction{
+
+  }
+}
