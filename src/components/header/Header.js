@@ -12,6 +12,7 @@ const Header = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [toggleSearch, setToggleSearch] = useState(false);
+  const [inputText, setInputText] = useState('');
 
   useEffect(() => {
     function handleResize() {
@@ -78,7 +79,14 @@ const Header = () => {
           htmlFor="header-inp" 
           className={`inp-block ${toggleSearch ? "active" : ""}`}>
           <div className="inp-block-container">
-            <input id="header-inp" placeholder="Начните поиск" type="text" className="header-input"/>
+            <input 
+              id="header-inp" 
+              placeholder="Начните поиск" 
+              type="text" 
+              className="header-input"
+              onChange={(e) => setInputText(e.target.value)}
+              value={inputText}
+              />
             <button>Найти</button>
           </div>
       </label>
