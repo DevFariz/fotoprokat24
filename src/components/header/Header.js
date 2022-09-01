@@ -29,7 +29,7 @@ const Header = () => {
     const toggleBurger = () => {
       setMobileMenu(!mobileMenu)
     }
-  
+
     return(
       <button className={`burger ${mobileMenu ? "active" : null}`} onClick={toggleBurger}>
         <span className="burger__line"></span>
@@ -79,7 +79,7 @@ const Header = () => {
           className={`inp-block ${toggleSearch ? "active" : ""}`}>
           <div className="inp-block-container">
             <input id="header-inp" placeholder="Начните поиск" type="text" className="header-input"/>
-            <button>Найти (enter)</button>
+            <button>Найти</button>
           </div>
       </label>
     </header>

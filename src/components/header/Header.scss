@@ -3,6 +3,7 @@
 
 .header{
   border-bottom: 1px solid #EFEFEF;
+  background: #fff;
 
   .inp-block{
     position: absolute;
@@ -12,12 +13,17 @@
     width: 100%;
     transition: 0.3s;
     transform: translateY(-100%);
+    z-index: -1;
 
     &-container{
       max-width: 1110px;
       @include flex-space-between;
       padding: 18px 10px;
       margin: 0 auto;
+
+      @include xl{
+        padding: 10px;
+      }
 
       input{
         display: block;
@@ -27,6 +33,10 @@
         line-height: 21px;
         background: transparent;
         outline: none;
+        @include sm{
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
       button{
         display: block;
@@ -40,13 +50,23 @@
         border-radius: 100px;
         padding: 10px 25px;
         cursor: pointer;
+        @include sm{
+          padding: 5px 15px;
+        }
       }
-
     }
   }
 
   .inp-block.active{
-    transform: translateY(100%)
+    transform: translateY(94%);
+
+    @include xl{
+      transform: translateY(72%);
+    }
+
+    @include sm{
+      transform: translateY(60%);
+    }
   }
 
   &-container{
