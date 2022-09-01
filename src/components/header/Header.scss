@@ -3,6 +3,7 @@
 
 .header{
   border-bottom: 1px solid #EFEFEF;
+  background: #fff;
 
   .inp-block{
     position: absolute;
@@ -11,22 +12,31 @@
     top: 0;
     width: 100%;
     transition: 0.3s;
-    transform: scale(0);
+    transform: translateY(-100%);
+    z-index: -1;
 
     &-container{
-      max-width: 1380px;
-      @include flex-space-around;
+      max-width: 1110px;
+      @include flex-space-between;
       padding: 18px 10px;
       margin: 0 auto;
+
+      @include xl{
+        padding: 10px;
+      }
 
       input{
         display: block;
         border: none;
-        padding: 15px 0;
+        padding: 13px 0;
         font-size: 18px;
         line-height: 21px;
         background: transparent;
         outline: none;
+        @include sm{
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
       button{
         display: block;
@@ -38,15 +48,25 @@
         background: #FFFFFF;
         box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
         border-radius: 100px;
-        padding: 12px 25px;
+        padding: 10px 25px;
         cursor: pointer;
+        @include sm{
+          padding: 5px 15px;
+        }
       }
-
     }
   }
 
   .inp-block.active{
-    transform: scale(100%)
+    transform: translateY(94%);
+
+    @include xl{
+      transform: translateY(72%);
+    }
+
+    @include sm{
+      transform: translateY(60%);
+    }
   }
 
   &-container{

@@ -29,7 +29,7 @@ const Header = () => {
     const toggleBurger = () => {
       setMobileMenu(!mobileMenu)
     }
-  
+
     return(
       <button className={`burger ${mobileMenu ? "active" : null}`} onClick={toggleBurger}>
         <span className="burger__line"></span>
@@ -38,7 +38,6 @@ const Header = () => {
       </button>
     )
   }
-
 
   return (
     <header className="header">
@@ -69,7 +68,7 @@ const Header = () => {
           </nav>
           <div className="user-interaction">
             {width > 840 ? <BtnsLeft /> : null}
-            <BtnsRight toggleBurger={toggleSearch} setToggleSearch={setToggleSearch}/>
+            <BtnsRight toggleSearch={toggleSearch} setToggleSearch={setToggleSearch}/>
             {width <=840 ? <Burger /> : null}
           </div>
           
@@ -80,7 +79,7 @@ const Header = () => {
           className={`inp-block ${toggleSearch ? "active" : ""}`}>
           <div className="inp-block-container">
             <input id="header-inp" placeholder="Начните поиск" type="text" className="header-input"/>
-            <button>Найти (enter)</button>
+            <button>Найти</button>
           </div>
       </label>
     </header>
@@ -104,6 +103,7 @@ function BtnsLeft() {
 }
 
 function BtnsRight({toggleSearch, setToggleSearch}) {
+  
   return (
     <div>
       <button onClick={() => setToggleSearch(!toggleSearch)} name="search" className="user-search header-btn">
@@ -115,7 +115,5 @@ function BtnsRight({toggleSearch, setToggleSearch}) {
     </div>
   )
 }
-
-
 
 export default Header;
