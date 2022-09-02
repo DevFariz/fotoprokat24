@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./Header.scss";
 
 import Compare from "../../resources/svg/compare.svg";

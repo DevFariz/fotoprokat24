@@ -59,6 +59,7 @@
 
   .inp-block.active{
     transform: translateY(94%);
+    z-index: 1;
 
     @include xl{
       transform: translateY(72%);
