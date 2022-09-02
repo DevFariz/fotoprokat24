@@ -1,0 +1,73 @@
+@import '../../style/style.scss';
+@import "../../style/mixin.scss";
+@import "../../style/breakpoints.scss";
+
+.intro-info{
+  background: #F5F5F5;
+  padding: 45px 0;
+
+  @include md{
+    background: #fff;
+    padding: 20px 0;
+  }
+
+  &-container{
+    @include flex-space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint(1200px){
+      @include flex-space-around;
+    }
+
+    @include md{
+      align-items: stretch;
+    }
+
+    @include breakpoint(380px){
+      display: block;
+    }
+  }
+
+  &__item{
+    display: flex;
+    margin: 0 20px 30px 0;
+
+    @include md{
+      text-align: center;
+      display: block;
+      padding: 30px 20px 20px;
+      background: #F5F5F5;
+      margin-right: 5px;
+    }
+
+    @include breakpoint(380px){
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      padding: 15px 10px 15px;
+    }
+  }
+
+  &__img{
+    display: inline-block;
+    margin: 0 19px 14px 0;
+    @include md{
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text{
+    max-width: 150px;
+    font-size: 14px;
+    line-height: 20px;
+    @include md{
+      max-width: 120px;
+    }
+
+    @include breakpoint(380px){
+      max-width: 100%;
+    }
+  }
+
+}
