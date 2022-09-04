@@ -1,0 +1,38 @@
+@import '../../style/style.scss';
+@import "../../style/mixin.scss";
+@import "../../style/breakpoints.scss";
+
+.goods{
+  margin-bottom: 95px;
+
+  &-container{
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &-slider{
+    position: relative;
+  }
+
+  .swiper-button-prev, .swiper-button-next{
+    background-color: #fff;
+    background: url('../../resources/svg/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    &::after{
+      display: none;
+    }
+  }
+
+  .swiper-button-prev{
+  }
+
+  .swiper-button-next{
+    transform: rotate(180deg);
+  }
+}

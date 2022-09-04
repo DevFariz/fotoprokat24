@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import "./Header.scss";
 
 import Compare from "../../resources/svg/compare.svg";
@@ -13,6 +13,10 @@ const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [toggleSearch, setToggleSearch] = useState(false);
   const [inputText, setInputText] = useState('');
+
+
+  // window.innerWidth < 840 ? setMobileMenu(true) : setMobileMenu(false)
+
 
   useEffect(() => {
     function handleResize() {

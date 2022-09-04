@@ -1,0 +1,76 @@
+@import "../../../style/mixin";
+@import "../../../style/style.scss";
+
+.goods{
+  &-item{
+    max-width: 345px;
+    border: 1px solid #EFEFEF;
+    text-align: center;
+    padding: 26px 0 21px;
+
+  }
+  
+  &__name{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__manufacturer{
+    font-size: 14px;
+    line-height: 26px;
+    color: #75758A;
+    margin-bottom: 23px;
+  }
+
+  &-durations{
+    @include flex-space-between;
+    margin-bottom: 20px;
+  }
+
+  &-duration{
+    text-align: center;
+    padding: 20px 15px 12px 15px;
+    border-left: 1px solid #EFEFEF;
+    &:first-child{
+      border: none;
+    }
+  }
+
+  &-price{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &-day{
+    font-size: 14px;
+    line-height: 20px;
+    color: #75758A;
+  }
+
+  &-btns{
+    @include flex-space-around
+  }
+
+  &-more{
+    padding: 13px 23px 10px;
+    cursor: pointer;
+  }
+
+  &-card{
+    position: relative;
+    padding: 12px 22px 12px 50px;
+    cursor: pointer;
+    &:before{
+      content: '';
+      background: url('../../../resources/svg/cart.svg') no-repeat;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 24px;
+      top: 12px;
+      z-index: 1;
+    }
+  }
+}
