@@ -21,11 +21,15 @@
     height: 40px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
+    top: 45%;
     &::after{
       display: none;
     }
     &:hover{
       background-color: rgb(248, 245, 245);
+    }
+    @include breakpoint(480px){
+      display: none;
     }
   }
 

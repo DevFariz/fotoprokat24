@@ -58,7 +58,7 @@ const MainSlider = () => {
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
 
-  const items = data.map(item => {
+  const slides = data.map(item => {
     const {id, ...otherProps} = item;
     return (
       <SwiperSlide key={id} className="goods-slider__item">
@@ -77,7 +77,6 @@ const MainSlider = () => {
           slidesPerView={3}
           slidesPerGroup={3}
           loop={true}
-          spaceBetween={22}
           navigation={{
               prevEl: navigationPrevRef.current,
               nextEl: navigationNextRef.current,
@@ -86,9 +85,28 @@ const MainSlider = () => {
                 swiper.params.navigation.prevEl = navigationPrevRef.current;
                 swiper.params.navigation.nextEl = navigationNextRef.current;
           }}
-          
+          breakpoints={{
+            960: {
+              minwidth: 1150,
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+              spaceBetween: 22
+            },
+            660: {
+              minwidth: 960,
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+              spaceBetween: 30
+            },
+            0: {
+              minwidth: 660,
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+              spaceBetween: 20
+            },
+          }}
           className="goods-slider">
-          {items}
+          {slides}
           <div className="swiper-button-prev" ref={navigationPrevRef}>
             <img src={Arrow} alt="arrow" />
           </div>
