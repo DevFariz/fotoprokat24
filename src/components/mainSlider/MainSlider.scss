@@ -5,6 +5,10 @@
 .goods{
   margin-bottom: 95px;
 
+  @include md{
+    margin-bottom: 45px;
+  }
+
   &-container{
     max-width: 1150px;
     margin: 0 auto;

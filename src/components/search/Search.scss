@@ -1,0 +1,50 @@
+@import "../../style/style.scss";
+@import "../../style/mixin.scss";
+
+.search{
+  margin-bottom: 45px;
+  &-title{
+    text-transform: uppercase;
+  }
+
+  &-text{
+    max-width: 576px;
+    padding: 0 3px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    color: #75758A;
+    margin-bottom: 17px;
+    span{
+      font-weight: 700;
+    }
+  }
+
+  &-btns{
+    @include flex-space-around;
+    max-width: 570px;
+    margin: 0 auto;
+
+    @include breakpoint(540px){
+      flex-direction: column;
+    }
+  }
+
+  &-all{
+    padding: 17px 55px;
+    @include breakpoint(540px){
+      padding: 17px 20px;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-start{
+    padding: 17px 55px;
+    @include breakpoint(540px){
+      padding: 17px 20px;
+      width: 80%;
+    }
+  }
+}
