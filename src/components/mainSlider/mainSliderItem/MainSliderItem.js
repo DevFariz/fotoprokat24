@@ -1,5 +1,8 @@
 import "./MainSliderItem.scss";
 
+import Star from "../../../resources/svg/star.svg";
+import Compare from "../../../resources/svg/compare.svg";
+
 const MainSliderItem = ({name, manufacturer, img, prices}) => {
   
   const durationPrices = prices.map(({label, price}, i) => {
@@ -23,6 +26,12 @@ const MainSliderItem = ({name, manufacturer, img, prices}) => {
         <button className="goods-more white-btn">Подробнее</button>
         <button className="goods-card green-btn">В корзину</button>
       </div>
+      <button className="goods-compare goods-btn">
+        <img src={Compare} alt="compare" />
+      </button>
+      <button className="goods-starred goods-btn">
+        <img src={Star} alt="starred" />
+      </button>
     </div>
   )
 }

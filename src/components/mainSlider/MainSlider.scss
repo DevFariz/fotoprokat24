@@ -8,31 +8,33 @@
   &-container{
     max-width: 1150px;
     margin: 0 auto;
-    text-align: center;
   }
 
   &-slider{
     position: relative;
+    padding: 0 20px;
   }
 
   .swiper-button-prev, .swiper-button-next{
     background-color: #fff;
-    background: url('../../resources/svg/arrow.svg');
-    background-repeat: no-repeat;
-    background-position: center;
     width: 40px;
     height: 40px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
-    z-index: 10;
+    transition: 0.3s;
     &::after{
       display: none;
+    }
+    &:hover{
+      background-color: rgb(248, 245, 245);
     }
   }
 
   .swiper-button-prev{
+    left: 5px;
   }
 
   .swiper-button-next{
+    right: 5px;
     transform: rotate(180deg);
   }
 }
