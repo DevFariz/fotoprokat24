@@ -1,3 +1,4 @@
+import { useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,6 +12,7 @@ import MainSliderItem from "./mainSliderItem/MainSliderItem";
 import Goods01 from "../../resources/img/goods-01.jpg";
 import Goods02 from "../../resources/img/goods-02.jpg";
 import Goods03 from "../../resources/img/goods-03.jpg";
+import Arrow from "../../resources/svg/arrow.svg";
 
 const MainSlider = () => {
 
@@ -53,10 +55,13 @@ const MainSlider = () => {
     ]},
   ]
 
-  const items = data.map(item => {
+  const navigationPrevRef = useRef(null)
+  const navigationNextRef = useRef(null)
+
+  const slides = data.map(item => {
     const {id, ...otherProps} = item;
     return (
-      <SwiperSlide key={id}>
+      <SwiperSlide key={id} className="goods-slider__item">
         <MainSliderItem {...otherProps}/>
       </SwiperSlide>
       
@@ -68,13 +73,46 @@ const MainSlider = () => {
       <h2 className="goods-title title"><span>Популярные</span> товары</h2>
       <div className="goods-container">
         <Swiper 
+          modules={[Navigation]} 
           slidesPerView={3}
-          navigation={true} 
           slidesPerGroup={3}
           loop={true}
-          modules={[Navigation]} 
+          navigation={{
+              prevEl: navigationPrevRef.current,
+              nextEl: navigationNextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = navigationPrevRef.current;
+                swiper.params.navigation.nextEl = navigationNextRef.current;
+          }}
+          breakpoints={{
+            960: {
+              minwidth: 1150,
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+              spaceBetween: 22
+            },
+            660: {
+              minwidth: 960,
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+              spaceBetween: 30
+            },
+            0: {
+              minwidth: 660,
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+              spaceBetween: 20
+            },
+          }}
           className="goods-slider">
-          {items}
+          {slides}
+          <div className="swiper-button-prev" ref={navigationPrevRef}>
+            <img src={Arrow} alt="arrow" />
+          </div>
+          <div className="swiper-button-next" ref={navigationNextRef}>
+            <img src={Arrow} alt="arrow" />
+          </div>
         </Swiper>
       </div>
     </section>
