@@ -35,6 +35,9 @@ function EarnWithUs() {
         <div className="earn-with-us-items">
           {items}
         </div>
+        <div className="earn-with-us__btn-container"> 
+          <button className="earn-with-us__btn green-btn">Предложить свою технику</button>
+        </div>
       </div>
     </section>
   );

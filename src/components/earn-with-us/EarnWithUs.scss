@@ -53,4 +53,11 @@
     margin: 0 auto 38px;
     padding: 0 3px;
   }
+
+  &__btn{
+    padding: 17px 39px;
+    &-container{
+      @include flex-space-around;
+    }
+  }
 }
