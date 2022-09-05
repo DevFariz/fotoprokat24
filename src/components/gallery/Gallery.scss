@@ -1,0 +1,86 @@
+@import "../../style/style.scss";
+@import "../../style/mixin.scss";
+
+.gallery{
+  margin-bottom: 100px;
+
+  @include md{
+    margin-bottom: 50px;
+  }
+
+  &-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+
+    @include lg{
+      gap: 20px;
+    }
+
+   
+  }
+
+  &-item{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 0 7.15% 7.15%;
+    min-height: 350px;
+    grid-column: span 2;
+    overflow: hidden;
+
+    &:nth-child(4){
+      grid-column: span 4;
+      @include lg{
+        grid-column: span 3;
+      }
+
+      @include breakpoint(600px){
+        grid-column: span 6;
+      }
+    }
+
+    &:hover .gallery-bg{
+      transform: scale(1.05);
+    }
+
+    &:hover .gallery-text{
+      background: #75758A;
+      color: #fff;
+    }
+
+    @include lg{
+      grid-column: span 3;
+    }
+
+    @include breakpoint(600px){
+      width: 80%;
+      margin: 0 auto;
+      grid-column: span 6;
+    }
+
+    @include sm{
+      width: 98%;
+    }
+  }
+
+  &-text{
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 40px;
+    padding: 11px 40px 11px 15px;
+    transition: 0.3s;
+  }
+
+  &-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: 0.3s;
+  }
+}
