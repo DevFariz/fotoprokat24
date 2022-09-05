@@ -1,3 +1,4 @@
+import EarnWithUs from "../components/earn-with-us/EarnWithUs";
 import Gallery from "../components/gallery/Gallery";
 import Intro from "../components/intro/Intro";
 import IntroInfo from "../components/introInfo/IntroInfo";
@@ -13,6 +14,7 @@ const MainPage = () => {
       <MainSlider />
       <Search />
       <Gallery />
+      <EarnWithUs />
     </main>
   )
 }
