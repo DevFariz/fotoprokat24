@@ -5,8 +5,10 @@
 .earn-with-us{
   padding: 95px 0;
   background: #F5F5F5;
+  margin-bottom: 95px;
 
   @include md{
+    margin-bottom: 30px;
     padding: 40px 0;
   }
 
