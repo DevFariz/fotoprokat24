@@ -1,0 +1,64 @@
+@import "../../style/style.scss";
+@import "../../style/mixin.scss";
+@import "../../style/breakpoints";
+
+.locations{
+  background: url('../../resources//img/locations.jpg') no-repeat;
+  background-size: cover;
+  padding: 105px 0;
+
+  @include lg{
+    padding: 50px 0;
+  }
+
+  @include sm{
+    padding: 20px 0;
+  }
+
+  &-container{
+    @include flex-space-between;
+    flex-wrap: wrap;
+  }
+
+  &-item{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 25px 30px 30px;
+    flex-basis: 23%;
+
+    @include lg{
+      flex-basis: 48%;
+      margin: 10px 0;
+    }
+
+    @include sm{
+      flex-basis: 96%;
+      margin: 10px auto;
+    }
+  }
+
+  &-title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 18px;
+  }
+
+  &-place{
+    font-size: 14px;
+    line-height: 16px;
+    color: #75758A;
+    margin-bottom: 10px;
+  }
+
+  &-link{
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #60B021;
+    transition: 0.25s;
+    &:hover{
+      color: #3c691a;
+    }
+  }
+}
