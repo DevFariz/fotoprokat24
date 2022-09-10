@@ -1,1 +1,1 @@
-Stack: React, React-router, SCSS, Django
+Stack: React, React-router, SwiperJS, SCSS, Django
