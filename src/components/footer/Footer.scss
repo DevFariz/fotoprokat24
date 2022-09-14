@@ -1,0 +1,78 @@
+@import "../../style/style.scss";
+@import "../../style/mixin.scss";
+@import "../../style/breakpoints";
+
+.footer{
+  padding: 16px 0;
+  background: #515668;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  &-top{
+    color: #8EE901;
+    &-container{
+      @include flex-space-between;
+    }
+
+    &-left{
+      display: flex;
+      align-items: center;
+      p{
+        margin-left: 10px;
+      }
+      span{
+        color: #fff;
+      }
+    }
+
+    &-center{
+      display: flex;
+      align-items: center;
+
+      button{
+        padding: 13px 22px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #4F9C2C;
+        border: none;
+        cursor: pointer;
+        transition: 0.25s;
+        &:hover{
+          background: #55ad2c;
+        }
+      }
+    }
+
+    &__input{
+      width: 315px;
+      padding: 12px 20px;
+      outline: none;
+    }
+
+    &-right{
+      display: flex;
+      align-items: center;
+      a{
+        text-decoration: none;
+        color: #8EE901;
+        margin-left: 10px;
+        transition: 0.3s;
+        &:hover{
+          color: #81cf0c;
+        }
+      }
+
+      img{
+        transition: 0.25s;
+      }
+    }
+  }
+}
+
+.footer-top-right:hover img{
+  transform: translateY(-4px);
+}

@@ -1,4 +1,5 @@
 import MainPage from "../../pages/MainPage";
+import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import "./App.scss"
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <MainPage />
+      <Footer />
     </>
   );
 }
