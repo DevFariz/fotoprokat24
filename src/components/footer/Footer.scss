@@ -3,16 +3,63 @@
 @import "../../style/breakpoints";
 
 .footer{
-  padding: 16px 0;
-  background: #515668;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+
+
+  &-logo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    span{
+      background: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &-socials{
+    display: flex;
+  }
+
+  &-social{
+    margin-right: 10px;
+    
+    &__link{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      color: #fff;
+      &_facebook{
+        background-color: rgb(78, 78, 238);
+      }
+      &_twitter{
+        background-color: rgb(68, 207, 231);
+      }
+      &_youtube{
+        background-color: rgb(243, 61, 61);
+      }
+      &_instagram{
+        background-color: rgb(107, 184, 117);
+      }
+    }
+  }
 
   &-top{
+    padding: 16px 0;
+    background: #515668;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  
     color: #8EE901;
     &-container{
       @include flex-space-between;
+      flex-wrap: wrap;
     }
 
     &-left{
@@ -71,8 +118,47 @@
       }
     }
   }
+
+  &-bottom{
+    padding: 40px 0;
+    background: #F5F5F5;
+    &-container{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__text{
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    &__contacts{
+      max-width: 280px;
+    }
+
+    &-items{
+      max-width: 180px  ;
+      &__title{
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      ul{
+        li{
+          font-style: normal;
+          color: rgb(143, 138, 138);
+          margin-bottom: 10px;
+          a{
+            display: inline-block;
+            color: rgb(143, 138, 138);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 .footer-top-right:hover img{
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
